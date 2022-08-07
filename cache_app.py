@@ -31,17 +31,17 @@ def search_prefix_suffix():
             if len(item) >= len_prefix + len_suffix:
                 if item[:len_prefix] == prefix and item[len(item)-len_suffix:] == suffix:
                     values.append(item)
-        return values
+        return values if values != [] else 'Invalid prefix/suffix'
     elif prefix == '' and suffix != '':
         for item in in_memory_cache.keys():
             if len(item) >= len_suffix:
                 if item[len(item)-len_suffix:] == suffix:
                     values.append(item)
-        return values
+        return values if values != [] else 'Invalid prefix/suffix'
     elif prefix != '' and suffix == '':
         for item in in_memory_cache.keys():
             if len(item) >= len_prefix:
                 if item[:len_prefix] == prefix:
                     values.append(item)
-        return values
-    return jsonify('Invalid prefix/suffix')
+        return values if values != [] else 'Invalid prefix/suffix'
+    return 'Invalid prefix/suffix'
