@@ -45,3 +45,6 @@ def search_prefix_suffix():
                     values.append(item)
         return values if values != [] else 'Invalid prefix/suffix'
     return 'Invalid prefix/suffix'
+
+if __name__ == "__main__":
+    app.run(port=5000, host="0.0.0.0")
