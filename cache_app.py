@@ -10,7 +10,7 @@ def get_key_value(key):
     if key in in_memory_cache:
         return in_memory_cache[key]
     else:
-        return jsonify('Invalid key')
+        return 'Invalid key'
 
 @app.route('/set', methods=['POST'])
 def set_key_value():
@@ -47,4 +47,4 @@ def search_prefix_suffix():
     return 'Invalid prefix/suffix'
 
 if __name__ == "__main__":
-    app.run(port=5000, host="0.0.0.0")
+    app.run(port=5000)
