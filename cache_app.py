@@ -5,6 +5,10 @@ app = Flask(__name__)
 
 in_memory_cache = {}
 
+@app.route('/')
+def landing_page():
+    return 'This is an empty key-value store. Please set data before you can get any key value or search for prefix/suffix.'
+
 @app.get('/get/<key>')
 def get_key_value(key):
     

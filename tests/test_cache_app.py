@@ -16,7 +16,8 @@ def test_set_key_value():
 
 def test_empty_value():
     response = app.test_client().get('/')
-    assert response.status_code == 404
+    assert response.status_code == 200
+    assert b'set data before' in response.data
 
 def test_invalid_value():
     response = app.test_client().get('/random')
