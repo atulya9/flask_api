@@ -42,5 +42,5 @@ coverage report
 ## Current hosting
 This API is currently hosted on a GCP VM deployed using the terraform script provided in 'terraform/main.tf'. However, the script will not run unless you provide your service account details.
 
-To check the deployment of the API, please visit http://34.71.2.187:8090
+To check the deployment of the API, please visit http://35.232.181.87:8090
 You can use the description provided above to interact with the API
